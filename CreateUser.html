@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<form action="CreateUser.php" method="post" id="frontEnd" onsubmit = "return required()" name = "form1">
+
+ <input type="text" name="user" id="user" placeholder="Please enter username"/>
+<br>
+
+<input type="submit" value="Add User" class = "button" />  
+</form>
+
+<script>
+
+function required()  
+{  
+    var user = document.forms["form1"]["user"].value; 
+    
+    if (user == "")
+    {
+        alert("Please enter a user");
+        return false;
+    }  
+  
+    return true;   
+ 
+}  
+
+</script>
+</body>
+</html>

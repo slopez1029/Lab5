@@ -1,0 +1,38 @@
+<html>
+<body>
+
+<form action="CreatePost.php" method="post" id="frontEnd" name = "form1" onsubmit = "return required()">
+
+ <input type="text" name="user" id="user" placeholder="Please enter username"/>
+ <input type="text" name="post" id="post" placeholder="Please enter content"/>
+<br>
+
+<input type="submit" value="Add Post" class = "button" />  
+</form>
+<script>
+
+function required()  
+{  
+    var post = document.forms["form1"]["post"].value;  
+    var user = document.forms["form1"]["user"].value; 
+    
+    if (user == "")
+    {
+        alert("Please enter a user");
+        return false;
+    }
+    else if (post == "")  
+    {  
+    alert("Please enter content to be posted");  
+    return false;  
+    }      
+  
+    return true;   
+ 
+}  
+
+</script>
+
+</body>
+
+</html>
